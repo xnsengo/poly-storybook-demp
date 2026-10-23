@@ -1,0 +1,210 @@
+.body-2-objectives {
+  position: relative;
+  overflow: hidden;
+  padding-top: 96px;
+  padding-bottom: 330px;
+  min-height: 740px;
+}
+.body-2-objectives-container {
+  position: static;
+}
+.body-2-objectives-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+.body-2-objectives-heading {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 900;
+  margin: 0 0 36px;
+  max-width: 510px;
+  text-wrap: pretty;
+}
+.body-2-objectives-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 650px;
+}
+.body-2-objective-button {
+  padding-left: 22px;
+  padding-right: 22px;
+  line-height: 22px;
+}
+.body-2-objectives-art {
+  position: absolute;
+  inset: 0 0 0 -120px;
+  pointer-events: none;
+}
+.body-2-objectives-graph {
+  position: absolute;
+  width: 1140px;
+  height: 410px;
+  bottom: 0;
+  left: calc(50% - 60px);
+  transform: translateX(-50%);
+}
+.body-2-objectives-line {
+  width: 1140px;
+  height: 410px;
+}
+.body-2-objectives-pin-one {
+  position: absolute;
+  width: 67px;
+  height: 81px;
+  left: 461px;
+  top: 93px;
+}
+.body-2-objectives-pin-two {
+  position: absolute;
+  width: 67px;
+  height: 81px;
+  left: 1106px;
+  top: -83px;
+}
+.body-2-objectives-image {
+  position: absolute;
+  width: 464px;
+  height: 749px;
+  object-fit: contain;
+  top: 171px;
+  left: calc(50% - 24px);
+  z-index: 1;
+  max-width: none;
+}
+@media (max-width: 767px) {
+  .body-2-objectives {
+    padding-top: 60px;
+    padding-bottom: 260px;
+    min-height: 0;
+  }
+  .body-2-objectives-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .body-2-objectives-copy {
+    max-width: 100%;
+  }
+  .body-2-objectives-heading {
+    font-size: 36px;
+    line-height: 36px;
+    max-width: none;
+    text-wrap: wrap;
+  }
+  /* investia.ca's heading line break only applies from 768px. */
+  .body-2-objectives-heading br {
+    display: none;
+  }
+
+  .body-2-objectives-image {
+    width: 173px;
+    height: 280px;
+    top: auto;
+    bottom: -36px;
+    left: auto;
+    right: 30px;
+  }
+  .body-2-objectives-art {
+    left: 0;
+    top: 110px;
+    bottom: -110px;
+  }
+  .body-2-objectives-graph {
+    left: 50%;
+  }
+  .body-2-objectives-pin-one {
+    width: 36px;
+    height: 44px;
+    left: 477px;
+    top: 133px;
+  }
+  .body-2-objectives-pin-two {
+    width: 36px;
+    height: 44px;
+    left: 1130px;
+    top: -66px;
+  }
+}
+
+/* Tablet layer, 768-1139px (investia.ca .grille-section-objectif min-width 768px rules). */
+@media (min-width: 768px) and (max-width: 1139px) {
+  .body-2-objectives {
+    padding-bottom: 400px;
+    min-height: 0;
+  }
+  .body-2-objectives-heading {
+    font-size: 40px;
+    line-height: 40px;
+    max-width: 650px;
+  }
+  .body-2-objectives-art {
+    left: 0;
+  }
+  .body-2-objectives-graph {
+    bottom: -85px;
+    left: calc(50% - 245px);
+  }
+  .body-2-objectives-pin-one {
+    width: 54px;
+    height: 65px;
+    left: 468px;
+    top: 110px;
+  }
+  .body-2-objectives-pin-two {
+    width: 54px;
+    height: 65px;
+    left: 1112px;
+    top: -66px;
+  }
+  .body-2-objectives-image {
+    width: 372px;
+    height: 600px;
+    top: auto;
+    bottom: -150px;
+    left: auto;
+    right: calc(50% - 300px);
+  }
+}
+
+.body-2-objective-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+.body-2-objective-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Graph rise, matching investia.ca (.dataset / .loaded .dataset / @keyframes raise). */
+@keyframes body-2-objectives-raise {
+  0% { transform: scaleY(0.01); }
+  50% { transform: scaleY(1); }
+  75% { transform: scaleY(0.9); }
+  100% { transform: scaleY(1); }
+}
+.body-2-objectives-graph[data-motion="ready"] .body-2-objectives-line svg > g > g > path {
+  opacity: 0.5;
+  transform: scaleY(0.01);
+  transform-origin: bottom;
+}
+.body-2-objectives-graph[data-loaded] .body-2-objectives-line svg > g > g > path {
+  opacity: 1;
+  animation: body-2-objectives-raise 0.5s ease 0.3s forwards;
+}
+.body-2-objectives-graph[data-loaded] .body-2-objectives-line svg > g > g:nth-of-type(2) > path {
+  animation-delay: 0.4s;
+}
+/* FR (investia.ca/accueil): "Nouvel événement de vie," holds on one line from 768px. */
+@media (min-width: 768px) {
+  :lang(fr) .body-2-objectives-heading {
+    max-width: 650px;
+  }
+}

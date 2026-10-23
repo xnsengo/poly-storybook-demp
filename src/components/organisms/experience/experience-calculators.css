@@ -1,0 +1,169 @@
+/* investia.ca .page-experience-investia .grille-section-calculateurs */
+[data-ploy-component="experience-calculators"] {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 300px;
+  background-color: #dbf0ff;
+  background-image: var(--exp-calc-lines);
+  background-repeat: no-repeat;
+  background-size: 1100px auto;
+  background-position: center bottom 48px;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-heading {
+  margin: 0 0 24px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 900;
+  text-wrap: initial;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 16px;
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-card-title {
+  margin: 0 0 24px;
+  font-size: 21px;
+  line-height: 26px;
+  text-wrap: initial;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-card-body {
+  margin: 0 0 16px;
+  line-height: 21.93px;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #064dd9;
+  text-decoration: none;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-link:hover {
+  color: #2962ff;
+  text-decoration: underline;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-link:active {
+  color: #003da5;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-curve {
+  position: absolute;
+  right: 0;
+  bottom: -65px;
+  left: -100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  pointer-events: none;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-curve svg {
+  flex: none;
+  width: 1280px;
+  height: 455px;
+  margin: auto;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-image img {
+  position: relative;
+  left: 40px;
+  z-index: 2;
+  width: auto;
+  max-width: none;
+  height: 228px;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="experience-calculators"] .experience-calculators-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="experience-calculators"] {
+    padding: 96px 0 370px;
+    background-size: 1446px auto;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-heading {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-card {
+    padding: 36px 32px;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-card-title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-curve {
+    bottom: -30px;
+    left: -240px;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-image img {
+    height: 300px;
+  }
+}
+@media (min-width: 1140px) {
+  [data-ploy-component="experience-calculators"] {
+    padding-bottom: 396px;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-heading {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-row {
+    flex-direction: row;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-card {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-curve {
+    left: 0;
+    bottom: 0;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-image {
+    align-items: flex-end;
+  }
+  [data-ploy-component="experience-calculators"] .experience-calculators-image img {
+    height: 375px;
+    left: 0;
+  }
+}
+
+/* Curve draw-in, matching investia.ca .anim-curve path.active (dash .8s ease-in). */
+@keyframes experience-calculators-dash {
+  to { stroke-dashoffset: 0; }
+}
+[data-ploy-component="experience-calculators"] .experience-calculators-curve path {
+  stroke: transparent;
+}
+[data-ploy-component="experience-calculators"][data-motion="ready"][data-active] .experience-calculators-curve path {
+  stroke: #064dd9;
+  animation: experience-calculators-dash 0.8s ease-in forwards;
+}

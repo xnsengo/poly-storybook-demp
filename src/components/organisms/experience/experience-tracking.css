@@ -1,0 +1,216 @@
+/* investia.ca .page-experience-investia .grille-section-suivi */
+[data-ploy-component="experience-tracking"] {
+  padding: 60px 0;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-heading {
+  margin: 0 0 36px;
+  font-size: 24px;
+  line-height: 28px;
+  text-wrap: initial;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 36px 16px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-portal,
+[data-ploy-component="experience-tracking"] .experience-tracking-documents {
+  background-color: #eff1f4;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-card-title {
+  margin: 0 0 24px;
+  font-size: 21px;
+  line-height: 26px;
+  text-wrap: initial;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-bold {
+  margin: 0 0 16px;
+  font-weight: 700;
+  line-height: 21.93px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-paragraph {
+  margin: 0 0 16px;
+  line-height: 21.93px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-portal-body {
+  margin-bottom: 12px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-list {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-list li {
+  position: relative;
+  padding-left: 48px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: normal;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-list-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-portal-note {
+  margin: 0 0 12px;
+  line-height: 21.93px;
+}
+/* investia.ca .ia-button-primary-text */
+[data-ploy-component="experience-tracking"] .experience-tracking-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #064dd9;
+  text-align: left;
+  text-decoration: none;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-link:hover,
+[data-ploy-component="experience-tracking"] .experience-tracking-custom-link:hover,
+[data-ploy-component="experience-tracking"] .experience-tracking-inline-link:hover {
+  color: #2962ff;
+  text-decoration: underline;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-link:active,
+[data-ploy-component="experience-tracking"] .experience-tracking-custom-link:active,
+[data-ploy-component="experience-tracking"] .experience-tracking-inline-link:active {
+  color: #003da5;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-link-block {
+  width: 100%;
+}
+/* .bloc-contenu-portail-client a.custom */
+[data-ploy-component="experience-tracking"] .experience-tracking-custom-link {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #064dd9;
+  text-decoration: none;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-custom-link .experience-material-icon {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  vertical-align: baseline;
+}
+/* Mobile app card */
+[data-ploy-component="experience-tracking"] .experience-tracking-app {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #dbf0ff;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-app-text {
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-badge {
+  display: block;
+  width: max-content;
+  margin-bottom: 12px;
+  line-height: 0;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-badge-last {
+  margin-bottom: 24px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-badge img {
+  width: 172px;
+  height: 50px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-app-note {
+  margin: 0 0 24px;
+  line-height: 21.93px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-inline-link {
+  font-weight: 600;
+  line-height: 22px;
+  color: #064dd9;
+  text-decoration: none;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-inline-icon {
+  position: relative;
+  top: 2px;
+  left: 2px;
+  vertical-align: baseline;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-app-image img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+/* Documents card */
+[data-ploy-component="experience-tracking"] .experience-tracking-doc {
+  display: flex;
+  margin-bottom: 12px;
+}
+[data-ploy-component="experience-tracking"] .experience-tracking-dialog-title {
+  margin: 0 0 24px;
+  color: #1b1b1b;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="experience-tracking"] .experience-tracking-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="experience-tracking"] {
+    padding: 96px 0;
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-card {
+    padding: 36px 32px;
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-card-title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-app {
+    justify-content: space-between;
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-app-text {
+    max-width: 50%;
+  }
+}
+@media (min-width: 1140px) {
+  [data-ploy-component="experience-tracking"] .experience-tracking-heading {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-row {
+    flex-direction: row;
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-portal {
+    width: calc(33.333% - 16px);
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-app {
+    width: calc(66.667% - 16px);
+  }
+  [data-ploy-component="experience-tracking"] .experience-tracking-app-text {
+    max-width: 305px;
+  }
+}

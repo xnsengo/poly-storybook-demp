@@ -1,0 +1,23 @@
+.experience-material-icon {
+  display: inline-block;
+  flex: none;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga";
+}
+.experience-material-icon-outlined {
+  font-family: "Material Icons Outlined";
+}
+.experience-material-icon-filled {
+  font-family: "Material Icons";
+}

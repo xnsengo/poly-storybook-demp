@@ -1,0 +1,168 @@
+/* investia.ca .heroV2.hero-n1 on .page-experience-investia */
+[data-ploy-component="experience-hero"] {
+  position: relative;
+  overflow: hidden;
+  min-height: 580px;
+  padding: 60px 0 0;
+  background-color: #dbf0ff;
+  background-image: var(--exp-hero-bg-mobile);
+  background-repeat: no-repeat;
+  background-size: auto 260px;
+  background-position: center bottom;
+  box-sizing: border-box;
+}
+[data-ploy-component="experience-hero"] .experience-hero-container {
+  position: relative;
+  z-index: 1;
+}
+[data-ploy-component="experience-hero"] .experience-hero-title {
+  margin: 0 0 24px;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 900;
+  text-wrap: initial;
+}
+[data-ploy-component="experience-hero"] .experience-hero-subtitle {
+  margin: 0 0 16px;
+  font-weight: 600;
+  line-height: 21.93px;
+}
+[data-ploy-component="experience-hero"] .experience-hero-overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+[data-ploy-component="experience-hero"] .experience-hero-overlay-row {
+  position: relative;
+  height: 0;
+}
+[data-ploy-component="experience-hero"] .experience-hero-curve {
+  position: absolute;
+  bottom: 0;
+  right: -32px;
+  width: 311px;
+  height: 140px;
+  overflow: visible;
+}
+[data-ploy-component="experience-hero"] .experience-hero-pin {
+  position: absolute;
+  max-width: none;
+}
+[data-ploy-component="experience-hero"] .experience-hero-pin-1 {
+  right: -15px;
+  bottom: 100px;
+  width: 86px;
+  height: 104px;
+}
+[data-ploy-component="experience-hero"] .experience-hero-pin-2 {
+  right: 242px;
+  bottom: 44px;
+  width: 46px;
+  height: 56px;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="experience-hero"] .experience-hero-container,
+  [data-ploy-component="experience-hero"] .experience-hero-overlay-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="experience-hero"] {
+    min-height: 598px;
+    background-image: var(--exp-hero-bg-tablet);
+    background-size: auto 100%;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-copy {
+    max-width: 390px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-curve {
+    bottom: 186px;
+    right: -38px;
+    width: 418px;
+    height: 181px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-pin-1 {
+    right: -12px;
+    bottom: 320px;
+    width: 107px;
+    height: 130px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-pin-2 {
+    right: 328px;
+    bottom: 224px;
+    width: 58px;
+    height: 70px;
+  }
+}
+@media (min-width: 1000px) {
+  [data-ploy-component="experience-hero"] {
+    background-image: var(--exp-hero-bg-desktop);
+  }
+}
+@media (min-width: 1140px) {
+  [data-ploy-component="experience-hero"] {
+    min-height: 560px;
+    padding: 96px 0;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-copy {
+    max-width: 464px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-curve {
+    bottom: 135px;
+    right: 16px;
+    width: 528px;
+    height: 225px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-pin-1 {
+    right: 52px;
+    bottom: 300px;
+    width: 134px;
+    height: 163px;
+  }
+  [data-ploy-component="experience-hero"] .experience-hero-pin-2 {
+    right: 500px;
+    bottom: 180px;
+    width: 72px;
+    height: 88px;
+  }
+}
+
+/* Motion, matching investia.ca .anim-curve path.active (dash .8s ease-in) and
+   .anim-pin.active (scale .65s, opacity 1s, delays .8s / 1s). Runs for everyone. */
+@keyframes experience-hero-dash {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes experience-hero-scale {
+  0% { transform: scale(0); }
+  70% { transform: scale(1); }
+}
+[data-ploy-component="experience-hero"] .experience-hero-curve path {
+  stroke: transparent;
+}
+[data-ploy-component="experience-hero"][data-motion="ready"][data-active] .experience-hero-curve path {
+  stroke: #064dd9;
+  animation: experience-hero-dash 0.8s ease-in forwards;
+}
+[data-ploy-component="experience-hero"] .experience-hero-pin {
+  opacity: 0;
+}
+[data-ploy-component="experience-hero"][data-active] .experience-hero-pin {
+  opacity: 1;
+  animation: experience-hero-scale 0.65s ease 0.8s;
+  transition: opacity 1s 0.8s;
+}
+[data-ploy-component="experience-hero"][data-active] .experience-hero-pin-2 {
+  animation-delay: 1s;
+  transition-delay: 1s;
+}

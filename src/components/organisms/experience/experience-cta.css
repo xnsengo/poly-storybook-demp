@@ -1,0 +1,18 @@
+[data-ploy-component="experience-cta"] .experience-cta-row {
+  display: flex;
+  padding: 48px 0;
+}
+[data-ploy-component="experience-cta"] .experience-cta-button {
+  min-height: 50px;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="experience-cta"] .experience-cta-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="experience-cta"] .experience-cta-button {
+    max-width: 50%;
+  }
+}

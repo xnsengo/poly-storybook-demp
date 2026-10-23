@@ -1,0 +1,32 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Investia components
+
+Storybook for the React components of the Investia site (`ploy-web`, Astro 6 + React 19 + Tailwind v4).
+The components, content dictionaries, styles and public assets are copied unchanged from the site;
+only the `*.stories.tsx` files are new.
+
+## Layers (Atomic Design)
+
+| Group          | What it holds                                                                 |
+| -------------- | ----------------------------------------------------------------------------- |
+| **Foundations**| The site's own design-system page (logo, colours, type, primitives)           |
+| **Atoms**      | Button, Heading, Text, Link, Tag, Avatar, Image, Logo, Icons, form controls…  |
+| **Molecules**  | Card, Faq, Tabs, Table, Carousel, Marquee, Overlay, Navbar, footer link lists |
+| **Organisms**  | Full page sections, grouped by page: Global, Home, Products, Experience, Advisor |
+| **Templates**  | `SiteShell`: nav, main, footer and regulatory strip                          |
+| **Pages**      | Every route, in English and French                                            |
+
+## Toolbar
+
+- **Viewport**: phone 375, tablet 768, laptop 1140, desktop 1440, the breakpoints the sections are measured against.
+- **Backgrounds**: light, light blue, dark (for light-on-dark components such as the footer links).
+- **Accessibility**: the a11y panel runs axe on every story.
+
+## Notes
+
+- Copy comes from `src/content/<page>/` (EN/FR). Organism stories pass the same dictionary entries the pages pass.
+- `AdvisorSearch` normally calls the Astro `/api/advisors` relay; its stories point `endpoint` at the fixtures in `public/mock/` instead.
+- Tokens: colours use `ploy-*` utilities defined in `src/styles/globals.css` and `theme.css`.

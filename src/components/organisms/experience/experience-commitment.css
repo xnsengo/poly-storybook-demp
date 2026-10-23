@@ -1,0 +1,192 @@
+/* investia.ca .page-experience-investia .grille-section-engagement */
+[data-ploy-component="experience-commitment"] {
+  padding: 60px 0;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-heading {
+  margin: 0 0 24px;
+  font-size: 24px;
+  line-height: 28px;
+  text-wrap: initial;
+}
+/* Timeline: vertical rail under 1140px */
+[data-ploy-component="experience-commitment"] .experience-commitment-timeline {
+  list-style: none;
+  margin: 0 0 60px;
+  padding: 0 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step {
+  position: relative;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -36px;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: solid 3px #064dd9;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 0 8px #fff;
+  z-index: 2;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -28px;
+  width: 1px;
+  height: calc(100% + 16px);
+  border: solid 2px #064dd9;
+  background-color: #064dd9;
+  z-index: 1;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step:last-child::after {
+  display: none;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step-title {
+  margin: 0 0 24px;
+  font-size: 21px;
+  line-height: 26px;
+  text-wrap: initial;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step-lead {
+  margin: 0 0 16px;
+  line-height: 21.93px;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-step-body {
+  margin: 0;
+  line-height: 21.93px;
+}
+/* Simplicity row (.row-image-fit, reversed on this page) */
+[data-ploy-component="experience-commitment"] .experience-commitment-simplicity {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 36px;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-simplicity-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-list {
+  list-style: none;
+  margin: 0 0 36px;
+  padding: 0;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-list-item {
+  position: relative;
+  padding-left: 48px;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: normal;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-list-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-action {
+  height: auto;
+  min-height: 50px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-media {
+  position: relative;
+  width: 100%;
+  max-width: 288px;
+  min-height: 180px;
+  border-radius: 288px;
+  overflow: hidden;
+}
+[data-ploy-component="experience-commitment"] .experience-commitment-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="experience-commitment"] .experience-commitment-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-simplicity-text {
+    align-items: stretch;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-action {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="experience-commitment"] {
+    padding: 96px 0;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-step-title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-simplicity {
+    flex-direction: row-reverse;
+    gap: 72px;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-simplicity > * {
+    width: calc(50% - 36px);
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-simplicity-text {
+    padding: 36px 0;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-media {
+    max-width: none;
+    min-height: 238px;
+  }
+}
+@media (min-width: 1140px) {
+  [data-ploy-component="experience-commitment"] .experience-commitment-heading {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-timeline {
+    flex-direction: row;
+    padding: 60px 0 0;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-step {
+    width: calc(33.333% - 16px);
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-step::before {
+    top: -48px;
+    left: 0;
+    box-shadow: 0 0 0 16px #fff;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-step::after {
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-simplicity {
+    gap: 112px;
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-simplicity > * {
+    width: calc(50% - 56px);
+  }
+  [data-ploy-component="experience-commitment"] .experience-commitment-media {
+    min-height: 0;
+  }
+}

@@ -1,0 +1,81 @@
+/* investia.ca #grille-section-epargne / #grille-section-assurance. */
+[data-ploy-component="products-card-grid"] {
+  padding-bottom: 60px;
+}
+[data-ploy-component="products-card-grid"] .products-card-grid-title {
+  margin: 0 0 36px;
+  font-size: 21px;
+  line-height: 26px;
+}
+[data-ploy-component="products-card-grid"] .products-card-grid-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+[data-ploy-component="products-card-grid"] .products-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 36px 24px;
+  border-radius: 20px;
+  background-color: #eff1f4;
+  text-align: left;
+}
+[data-ploy-component="products-card-grid"] .products-card-title {
+  margin: 0 0 24px;
+  font-size: 21px;
+  line-height: 1.24;
+}
+[data-ploy-component="products-card-grid"] .products-card-subtitle,
+[data-ploy-component="products-card-grid"] .products-card-body {
+  margin: 0 0 16px;
+  line-height: 1.29;
+}
+[data-ploy-component="products-card-grid"] .products-card-body:last-of-type {
+  margin-bottom: 36px;
+}
+[data-ploy-component="products-card-grid"] .products-card-action {
+  margin-top: auto;
+  height: auto;
+  min-height: 50px;
+  padding: 12px 24px; /* investia.ca .ia-button-primary-outlined: 14px 24px */
+  gap: 4px;
+  line-height: 22px;
+  white-space: normal;
+  text-align: center;
+}
+[data-ploy-component="products-card-grid"] .products-card-action:has(svg) {
+  justify-content: space-between;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="products-card-grid"] .products-card-grid-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="products-card-grid"] .products-card-grid-title {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  [data-ploy-component="products-card-grid"] .products-card-grid-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  [data-ploy-component="products-card-grid"] .products-card-grid-list-wide > .products-card {
+    grid-column: span 2;
+  }
+  /* investia.ca .col-1-1 .bloc-contenu.text-align-left [class*=ia-button]: sized to the label. */
+  [data-ploy-component="products-card-grid"] .products-card-action {
+    align-self: flex-start;
+  }
+  [data-ploy-component="products-card-grid"] .products-card-action:has(svg) {
+    justify-content: center;
+  }
+  [data-ploy-component="products-card-grid"].products-card-grid-last {
+    padding-bottom: 96px;
+  }
+}

@@ -1,0 +1,262 @@
+@import "swiper/css/effect-fade" layer(components);
+
+[data-ploy-component="body-1-hero"] .body-1-hero-panel {
+  position: relative;
+  height: 100%;
+  min-height: 560px;
+  padding: 96px 0;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center bottom;
+  box-sizing: border-box;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-container {
+  position: relative;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-copy {
+  max-width: 470px;
+  position: relative;
+  z-index: 1;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-title {
+  margin: 0 0 24px;
+  text-wrap: initial;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-description {
+  margin: 0 0 24px;
+  line-height: 21.93px;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-action {
+  height: auto;
+  min-height: 22px;
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: 4px;
+  line-height: 22px;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-secondary {
+  display: flex;
+  margin-top: 20px;
+  max-width: 300px;
+  height: auto;
+  min-height: 22px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 22px;
+  font-weight: 600;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-curve {
+  position: absolute;
+  pointer-events: none;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-curve svg {
+  width: 100%;
+  height: 100%;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-projects {
+  width: 344px;
+  height: 151px;
+  right: 32px;
+  top: 103px;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-tfsa {
+  width: 124px;
+  height: 194px;
+  left: 518px;
+  top: 65px;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-portal {
+  width: 185px;
+  height: 185px;
+  right: 79px;
+  top: 66px;
+}
+[data-ploy-component="body-1-hero"] .swiper-pagination {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 64px);
+  max-width: 1140px;
+  text-align: left;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 32px;
+}
+[data-ploy-component="body-1-hero"] .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 1;
+  box-sizing: border-box;
+  position: relative;
+}
+[data-ploy-component="body-1-hero"] .swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+}
+[data-ploy-component="body-1-hero"] .swiper-pagination-bullet-active {
+  background: currentColor;
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-panel {
+  background-image: var(--hero-bg-desktop);
+}
+/* Phone layer (investia.ca .page-accueil .carrousel-container-v3 .swiper-slide base rules). */
+@media (max-width: 767px) {
+  [data-ploy-component="body-1-hero"] .body-1-hero-panel {
+    min-height: 0;
+    padding: 60px 0 300px;
+    background-image: var(--hero-bg-mobile);
+    background-size: auto 260px;
+    background-position: center bottom;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-container {
+    position: static;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-copy {
+    max-width: 470px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-curve {
+    top: auto;
+    margin: 0 auto;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-projects {
+    left: 0;
+    right: -180px;
+    bottom: 80px;
+    width: 188px;
+    height: 97px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-tfsa {
+    left: -170px;
+    right: 0;
+    bottom: 85px;
+    width: 80px;
+    height: 125px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-portal {
+    left: 0;
+    right: -194px;
+    bottom: 69px;
+    width: 120px;
+    height: 120px;
+  }
+  [data-ploy-component="body-1-hero"] .swiper-pagination {
+    width: calc(100% - 30px);
+    bottom: 22px;
+  }
+}
+/* Tablet layer, 768-999px (investia.ca min-width 768px rules). */
+@media (min-width: 768px) and (max-width: 999px) {
+  [data-ploy-component="body-1-hero"] .body-1-hero-panel {
+    min-height: 0;
+    padding: 60px 0 330px;
+    background-image: var(--hero-bg-tablet);
+    background-size: auto 100%;
+    background-position: center bottom;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-container {
+    position: static;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-curve {
+    top: auto;
+    margin: 0 auto;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-projects {
+    left: 0;
+    right: -540px;
+    bottom: 245px;
+    width: 250px;
+    height: 121px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-tfsa {
+    left: -200px;
+    right: 0;
+    bottom: 200px;
+    width: 124px;
+    height: 194px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-portal {
+    left: 0;
+    right: -580px;
+    bottom: 280px;
+    width: 160px;
+    height: 160px;
+  }
+}
+/* investia.ca keeps the 40px title and 345px copy column until 1140px. */
+@media (min-width: 768px) and (max-width: 1139px) {
+  [data-ploy-component="body-1-hero"] .body-1-hero-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  [data-ploy-component="body-1-hero"] .body-1-hero-copy {
+    max-width: 345px;
+  }
+}
+
+
+/* Slide-one pin, positioned like investia.ca's .slideinvestir .anim-pin. */
+[data-ploy-component="body-1-hero"] .body-1-hero-pin {
+  position: absolute;
+  right: 30px;
+  bottom: 110px;
+  width: 54px;
+  height: 65px;
+}
+@media (min-width: 1000px) {
+  [data-ploy-component="body-1-hero"] .body-1-hero-pin {
+    right: 45px;
+    bottom: 145px;
+  }
+}
+@media (min-width: 1140px) {
+  [data-ploy-component="body-1-hero"] .body-1-hero-pin {
+    width: 67px;
+    height: 81px;
+  }
+}
+@media (max-width: 767px) {
+  [data-ploy-component="body-1-hero"] .body-1-hero-pin {
+    right: 25px;
+    bottom: 85px;
+    width: 36px;
+    height: 44px;
+  }
+}
+
+/* Curve and pin motion, matching investia.ca (.anim-curve / .anim-pin, @keyframes dash and scale). */
+@keyframes body-1-hero-dash {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes body-1-hero-pop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1); }
+}
+[data-ploy-component="body-1-hero"] .body-1-hero-curve > :not(.body-1-hero-pin) path {
+  stroke: transparent;
+}
+[data-ploy-component="body-1-hero"][data-motion="ready"] .swiper-slide-active .body-1-hero-curve > :not(.body-1-hero-pin) path {
+  stroke: #064dd9;
+  animation: body-1-hero-dash 0.8s ease-in 0.2s forwards;
+}
+/* Hidden from first paint (as on investia.ca) so the fade-in always runs. */
+[data-ploy-component="body-1-hero"] .body-1-hero-pin {
+  opacity: 0;
+}
+[data-ploy-component="body-1-hero"][data-motion="ready"] .swiper-slide-active .body-1-hero-pin {
+  opacity: 1;
+  animation: body-1-hero-pop 0.65s ease 1s;
+  transition: opacity 1s 1s;
+}

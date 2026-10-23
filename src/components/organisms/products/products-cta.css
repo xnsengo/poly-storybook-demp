@@ -1,0 +1,23 @@
+/* investia.ca .grille-section-cta .cta-group-full-width.cta-items1 */
+[data-ploy-component="products-cta"] .products-cta-row {
+  display: flex;
+  padding: 48px 16px;
+}
+[data-ploy-component="products-cta"] .products-cta-button {
+  flex: 1 1 0;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="products-cta"] .products-cta-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="products-cta"] .products-cta-row {
+    padding: 48px 0;
+  }
+  [data-ploy-component="products-cta"] .products-cta-button {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
+}

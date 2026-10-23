@@ -1,0 +1,116 @@
+/* investia.ca .heroV2.hero-n1 on /products-and-services. */
+[data-ploy-component="products-hero"] {
+  position: relative;
+  min-height: 580px;
+  padding: 60px 0;
+  background-image: var(--hero-bg-mobile);
+  background-repeat: no-repeat;
+  background-size: auto 260px;
+  background-position: center bottom;
+  box-sizing: border-box;
+}
+[data-ploy-component="products-hero"] .products-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+[data-ploy-component="products-hero"] .products-hero-title {
+  margin: 0 0 24px;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 900;
+  text-wrap: initial;
+}
+[data-ploy-component="products-hero"] .products-hero-body {
+  max-width: 464px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.29;
+}
+[data-ploy-component="products-hero"] .products-hero-overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+[data-ploy-component="products-hero"] .products-hero-overlay-row {
+  position: relative;
+}
+[data-ploy-component="products-hero"] .products-hero-curve {
+  position: absolute;
+  right: 30px;
+  bottom: 65px;
+  left: 0;
+  width: 258px;
+  height: 192px;
+  margin: auto;
+  overflow: visible;
+}
+/* Hidden until drawn, then the stroke dash runs (investia.ca @keyframes dash). */
+[data-ploy-component="products-hero"] .products-hero-curve path {
+  stroke: transparent;
+}
+[data-ploy-component="products-hero"][data-motion="drawn"] .products-hero-curve path {
+  stroke: #064dd9;
+  animation: products-hero-dash 0.8s ease-in forwards;
+}
+@keyframes products-hero-dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  [data-ploy-component="products-hero"] .products-hero-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  [data-ploy-component="products-hero"] {
+    min-height: 598px;
+    background-image: var(--hero-bg-tablet);
+    background-size: auto 100%;
+  }
+  [data-ploy-component="products-hero"] .products-hero-copy {
+    max-width: 390px;
+  }
+  [data-ploy-component="products-hero"] .products-hero-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  [data-ploy-component="products-hero"] .products-hero-curve {
+    bottom: 130px;
+    right: -236px;
+    width: 424px;
+    height: 316px;
+  }
+}
+@media (min-width: 1000px) {
+  [data-ploy-component="products-hero"] {
+    background-image: var(--hero-bg-desktop);
+  }
+  [data-ploy-component="products-hero"] .products-hero-curve {
+    bottom: 145px;
+    right: -445px;
+    width: 483px;
+    height: 360px;
+  }
+}
+@media (min-width: 1140px) {
+  [data-ploy-component="products-hero"] {
+    min-height: 560px;
+    padding: 96px 0;
+  }
+  [data-ploy-component="products-hero"] .products-hero-copy {
+    max-width: 464px;
+  }
+  [data-ploy-component="products-hero"] .products-hero-title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  [data-ploy-component="products-hero"] .products-hero-curve {
+    bottom: 120px;
+    right: -420px;
+  }
+}

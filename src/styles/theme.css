@@ -1,0 +1,492 @@
+/* ploy-theme: 202848cc-eb15-47b4-80c1-a6693a67ad08:0f46fdfb559d568ea8b271f3f4b03dca76fab69e24477eba5bff223f29b6b052 */
+/* Captured source mode: light; the opposite mode is derived. */
+/* ploy-theme-start */
+@import "./site-background.css";
+:root:root {
+  --background: var(--ploy-background-primary);
+  --foreground: var(--ploy-text-primary);
+  --card: var(--ploy-background-secondary);
+  --card-foreground: var(--ploy-text-primary);
+  --popover: var(--ploy-background-primary);
+  --popover-foreground: var(--ploy-text-primary);
+  --primary: var(--ploy-accent-primary);
+  --primary-foreground: var(--ploy-text-on-accent-primary);
+  --secondary: var(--ploy-background-secondary);
+  --secondary-foreground: var(--ploy-text-primary);
+  --muted: var(--ploy-background-secondary);
+  --muted-foreground: var(--ploy-text-secondary);
+  --accent: var(--ploy-accent-secondary);
+  --accent-foreground: var(--ploy-text-on-accent-secondary);
+  --input: var(--ploy-input-border);
+  --border: var(--ploy-border-primary);
+  --ring: var(--ploy-accent-primary);
+  --sidebar: var(--ploy-background-secondary);
+  --sidebar-foreground: var(--ploy-text-primary);
+  --sidebar-primary: var(--ploy-accent-primary);
+  --sidebar-primary-foreground: var(--ploy-text-on-accent-primary);
+  --sidebar-accent: var(--ploy-background-secondary);
+  --sidebar-accent-foreground: var(--ploy-text-primary);
+  --sidebar-border: var(--ploy-border-primary);
+  --sidebar-ring: var(--ploy-accent-primary);
+  --radius: 20px;
+  --radius-button: 9999px;
+  --radius-card: 20px;
+  --radius-input: 0px;
+  --font-heading: "Muoto", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-mono: "Open Sans", sans-serif;
+  --font-eyebrow: system-ui, sans-serif, -apple-system;
+  --font-button: system-ui, sans-serif, -apple-system;
+  --font-heading-weight: 500;
+  --font-heading-bold-weight: 700;
+  --font-heading-letter-spacing: -0.02em;
+  --font-heading-line-height: 1.2;
+  --font-body-weight: 400;
+  --font-body-bold-weight: 600;
+  --font-body-letter-spacing: normal;
+  --font-body-line-height: 1.5;
+  --font-button-weight: 500;
+  --font-button-letter-spacing: normal;
+  --font-button-line-height: 1;
+  --ploy-shadow-color: var(--ploy-border-primary);
+  --border-width: 1px;
+  --border-style: solid;
+  --ploy-neutral-primary: #ffffff;
+  --ploy-neutral-secondary: #dbf0ff;
+  --ploy-neutral-inverse: #01233f;
+  --ploy-neutral-light: #ffffff;
+  --ploy-neutral-dark: #1b1b1b;
+  --ploy-neutral-primary-s0: oklch(0.964 0 0.2);
+  --ploy-neutral-primary-s1: #ffffff;
+  --ploy-neutral-primary-s2: #dbf0ff;
+  --ploy-neutral-primary-s3: #dbf0ff;
+  --ploy-neutral-primary-s4: #dbf0ff;
+  --ploy-neutral-primary-s5: #dbf0ff;
+  --ploy-neutral-inverse-s0: oklch(0.35 0.054 247.98);
+  --ploy-neutral-inverse-s1: #01233f;
+  --ploy-neutral-inverse-s2: oklch(0.35 0.054 247.98);
+  --ploy-neutral-inverse-s3: oklch(0.35 0.054 247.98);
+  --ploy-neutral-inverse-s4: oklch(0.35 0.054 247.98);
+  --ploy-neutral-inverse-s5: oklch(0.35 0.054 247.98);
+  --ploy-accent-primary: #064dd9;
+  --ploy-accent-secondary: #064dd9;
+  --ploy-accent-tertiary: #064dd9;
+  --ploy-text-primary: #1b1b1b;
+  --ploy-text-secondary: #767676;
+  --ploy-text-inverse: oklch(0.964 0 0.2);
+  --ploy-text-inverse-secondary: oklch(0.964 0 0.2 / 60%);
+  --ploy-text-on-accent-primary: #ffffff;
+  --ploy-text-on-accent-secondary: #ffffff;
+  --ploy-text-on-accent-tertiary: #1b1b1b;
+  --ploy-button-primary-background: #064dd9;
+  --ploy-button-primary-text: #ffffff;
+  --ploy-button-primary-border: #064dd9;
+  --ploy-button-secondary-background: #01233f;
+  --ploy-button-secondary-text: #ffffff;
+  --ploy-button-secondary-border: #01233f;
+  --ploy-background-primary: var(--ploy-neutral-primary-s1);
+  --ploy-background-secondary: var(--ploy-neutral-secondary);
+  --ploy-background-accent-primary: var(--ploy-accent-primary);
+  --ploy-background-accent-secondary: var(--ploy-accent-secondary);
+  --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
+  --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
+  --ploy-border-primary: #dfdfdf;
+  --ploy-border-inverse: oklch(0.35 0.054 247.98);
+  --ploy-input-background: #ffffff;
+  --ploy-input-border: #01233f;
+  --destructive: #064dd9;
+  --ploy-neutral-primary-50: oklch(1 0 0);
+  --ploy-neutral-primary-100: oklch(0.964 0 0.2);
+  --ploy-neutral-primary-200: oklch(0.911 0 0.4);
+  --ploy-neutral-primary-300: oklch(0.849 0 0.6);
+  --ploy-neutral-primary-400: oklch(0.781 0 0.8);
+  --ploy-neutral-primary-500: oklch(0.708 0 1);
+  --ploy-neutral-primary-600: oklch(0.629 0 1.2);
+  --ploy-neutral-primary-700: oklch(0.547 0 1.4);
+  --ploy-neutral-primary-800: oklch(0.461 0 1.6);
+  --ploy-neutral-primary-900: oklch(0.372 0 1.8);
+  --ploy-neutral-primary-950: oklch(0.28 0 2);
+  --ploy-neutral-inverse-50: oklch(0.98 0.011 248.88);
+  --ploy-neutral-inverse-100: oklch(0.951 0.03 248.78);
+  --ploy-neutral-inverse-200: oklch(0.903 0.055 248.68);
+  --ploy-neutral-inverse-300: oklch(0.845 0.065 248.58);
+  --ploy-neutral-inverse-400: oklch(0.778 0.076 248.48);
+  --ploy-neutral-inverse-500: oklch(0.703 0.069 248.38);
+  --ploy-neutral-inverse-600: oklch(0.623 0.074 248.28);
+  --ploy-neutral-inverse-700: oklch(0.537 0.072 248.18);
+  --ploy-neutral-inverse-800: oklch(0.446 0.063 248.08);
+  --ploy-neutral-inverse-900: oklch(0.35 0.054 247.98);
+  --ploy-neutral-inverse-950: oklch(0.25 0.065 247.88);
+  --ploy-accent-primary-50: oklch(0.98 0.01 271.38);
+  --ploy-accent-primary-100: oklch(0.928 0.034 269.58);
+  --ploy-accent-primary-200: oklch(0.842 0.077 267.78);
+  --ploy-accent-primary-300: oklch(0.737 0.136 265.98);
+  --ploy-accent-primary-400: oklch(0.617 0.204 264.18);
+  --ploy-accent-primary-500: oklch(0.483 0.223 262.38);
+  --ploy-accent-primary-600: oklch(0.458 0.186 261.38);
+  --ploy-accent-primary-700: oklch(0.422 0.162 260.38);
+  --ploy-accent-primary-800: oklch(0.379 0.132 259.38);
+  --ploy-accent-primary-900: oklch(0.331 0.104 258.38);
+  --ploy-accent-primary-950: oklch(0.28 0.079 257.38);
+  --ploy-accent-secondary-50: oklch(0.98 0.01 271.38);
+  --ploy-accent-secondary-100: oklch(0.928 0.034 269.58);
+  --ploy-accent-secondary-200: oklch(0.842 0.077 267.78);
+  --ploy-accent-secondary-300: oklch(0.737 0.136 265.98);
+  --ploy-accent-secondary-400: oklch(0.617 0.204 264.18);
+  --ploy-accent-secondary-500: oklch(0.483 0.223 262.38);
+  --ploy-accent-secondary-600: oklch(0.458 0.186 261.38);
+  --ploy-accent-secondary-700: oklch(0.422 0.162 260.38);
+  --ploy-accent-secondary-800: oklch(0.379 0.132 259.38);
+  --ploy-accent-secondary-900: oklch(0.331 0.104 258.38);
+  --ploy-accent-secondary-950: oklch(0.28 0.079 257.38);
+  --ploy-choice-checked-background: #064dd9;
+  --ploy-choice-checked-border: #064dd9;
+  --ploy-choice-checked-mark: #ffffff;
+  --ploy-accent-tertiary-50: oklch(0.98 0.01 271.38);
+  --ploy-accent-tertiary-100: oklch(0.928 0.034 269.58);
+  --ploy-accent-tertiary-200: oklch(0.842 0.077 267.78);
+  --ploy-accent-tertiary-300: oklch(0.737 0.136 265.98);
+  --ploy-accent-tertiary-400: oklch(0.617 0.204 264.18);
+  --ploy-accent-tertiary-500: oklch(0.483 0.223 262.38);
+  --ploy-accent-tertiary-600: oklch(0.458 0.186 261.38);
+  --ploy-accent-tertiary-700: oklch(0.422 0.162 260.38);
+  --ploy-accent-tertiary-800: oklch(0.379 0.132 259.38);
+  --ploy-accent-tertiary-900: oklch(0.331 0.104 258.38);
+  --ploy-accent-tertiary-950: oklch(0.28 0.079 257.38);
+  --radius-image: 20px;
+  --font-display: "Muoto", sans-serif;
+  --ploy-font-display: "Muoto", sans-serif;
+  --ploy-font-heading: "Muoto", sans-serif;
+  --ploy-font-body: "Open Sans", sans-serif;
+  --ploy-font-mono: "Open Sans", sans-serif;
+  color-scheme: light;
+}
+:root:root.dark {
+  --background: var(--ploy-background-primary);
+  --foreground: var(--ploy-text-primary);
+  --card: var(--ploy-background-secondary);
+  --card-foreground: var(--ploy-text-primary);
+  --popover: var(--ploy-background-primary);
+  --popover-foreground: var(--ploy-text-primary);
+  --primary: var(--ploy-accent-primary);
+  --primary-foreground: var(--ploy-text-on-accent-primary);
+  --secondary: var(--ploy-background-secondary);
+  --secondary-foreground: var(--ploy-text-primary);
+  --muted: var(--ploy-background-secondary);
+  --muted-foreground: var(--ploy-text-secondary);
+  --accent: var(--ploy-accent-secondary);
+  --accent-foreground: var(--ploy-text-on-accent-secondary);
+  --input: var(--ploy-input-border);
+  --border: var(--ploy-border-primary);
+  --ring: var(--ploy-accent-primary);
+  --sidebar: var(--ploy-background-secondary);
+  --sidebar-foreground: var(--ploy-text-primary);
+  --sidebar-primary: var(--ploy-accent-primary);
+  --sidebar-primary-foreground: var(--ploy-text-on-accent-primary);
+  --sidebar-accent: var(--ploy-background-secondary);
+  --sidebar-accent-foreground: var(--ploy-text-primary);
+  --sidebar-border: var(--ploy-border-primary);
+  --sidebar-ring: var(--ploy-accent-primary);
+  --radius: 20px;
+  --radius-button: 9999px;
+  --radius-card: 20px;
+  --radius-input: 0px;
+  --font-heading: "Muoto", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-mono: "Open Sans", sans-serif;
+  --font-eyebrow: system-ui, sans-serif, -apple-system;
+  --font-button: system-ui, sans-serif, -apple-system;
+  --font-heading-weight: 500;
+  --font-heading-bold-weight: 700;
+  --font-heading-letter-spacing: -0.02em;
+  --font-heading-line-height: 1.2;
+  --font-body-weight: 400;
+  --font-body-bold-weight: 600;
+  --font-body-letter-spacing: normal;
+  --font-body-line-height: 1.5;
+  --font-button-weight: 500;
+  --font-button-letter-spacing: normal;
+  --font-button-line-height: 1;
+  --ploy-shadow-color: var(--ploy-border-primary);
+  --border-width: 1px;
+  --border-style: solid;
+  --ploy-neutral-primary: oklch(0 0 0);
+  --ploy-neutral-secondary: oklch(0.056 0.03 238.81);
+  --ploy-neutral-inverse: oklch(0.75 0.065 247.88);
+  --ploy-neutral-light: oklch(0.951 0.03 248.78);
+  --ploy-neutral-dark: oklch(0 0 0);
+  --ploy-neutral-primary-s0: oklch(0 0 0);
+  --ploy-neutral-primary-s1: oklch(0 0 0);
+  --ploy-neutral-primary-s2: oklch(0.056 0.03 238.81);
+  --ploy-neutral-primary-s3: oklch(0.14 0 0);
+  --ploy-neutral-primary-s4: oklch(0.224 0 0);
+  --ploy-neutral-primary-s5: oklch(0.308 0 0);
+  --ploy-neutral-inverse-s0: oklch(0.808 0.065 247.88);
+  --ploy-neutral-inverse-s1: oklch(0.75 0.065 247.88);
+  --ploy-neutral-inverse-s2: oklch(0.692 0.074 248.7);
+  --ploy-neutral-inverse-s3: oklch(0.605 0.065 247.88);
+  --ploy-neutral-inverse-s4: oklch(0.518 0.065 247.88);
+  --ploy-neutral-inverse-s5: oklch(0.431 0.065 247.88);
+  --ploy-accent-primary: oklch(0.517 0.223 262.38);
+  --ploy-accent-secondary: oklch(0.517 0.223 262.38);
+  --ploy-accent-tertiary: oklch(0.517 0.223 262.38);
+  --ploy-text-primary: oklch(0.951 0.03 248.78);
+  --ploy-text-secondary: oklch(0.434 0 0);
+  --ploy-text-inverse: oklch(0 0 0);
+  --ploy-text-inverse-secondary: oklch(0 0 0 / 60%);
+  --ploy-text-on-accent-primary: oklch(0 0 0);
+  --ploy-text-on-accent-secondary: oklch(0 0 0);
+  --ploy-text-on-accent-tertiary: oklch(0.951 0.03 248.78);
+  --ploy-button-primary-background: oklch(0.517 0.223 262.38);
+  --ploy-button-primary-text: oklch(0 0 0);
+  --ploy-button-primary-border: oklch(0.517 0.223 262.38);
+  --ploy-button-secondary-background: oklch(0.75 0.065 247.88);
+  --ploy-button-secondary-text: oklch(0 0 0);
+  --ploy-button-secondary-border: oklch(0.75 0.065 247.88);
+  --ploy-background-primary: var(--ploy-neutral-primary-s1);
+  --ploy-background-secondary: var(--ploy-neutral-secondary);
+  --ploy-background-accent-primary: var(--ploy-accent-primary);
+  --ploy-background-accent-secondary: var(--ploy-accent-secondary);
+  --ploy-background-accent-tertiary: var(--ploy-accent-tertiary);
+  --ploy-background-inverse: var(--ploy-neutral-inverse-s1);
+  --ploy-border-primary: oklch(1 0 0 / 10%);
+  --ploy-border-inverse: oklch(0.431 0.065 247.88);
+  --ploy-input-background: oklch(0 0 0);
+  --ploy-input-border: oklch(0.75 0.065 247.88);
+  --destructive: oklch(0.517 0.223 262.38);
+  --ploy-neutral-primary-50: oklch(0.98 0 352);
+  --ploy-neutral-primary-100: oklch(0.941 0 352.8);
+  --ploy-neutral-primary-200: oklch(0.877 0 353.6);
+  --ploy-neutral-primary-300: oklch(0.798 0 354.4);
+  --ploy-neutral-primary-400: oklch(0.708 0 355.2);
+  --ploy-neutral-primary-500: oklch(0.609 0 356);
+  --ploy-neutral-primary-600: oklch(0.501 0 356.8);
+  --ploy-neutral-primary-700: oklch(0.385 0 357.6);
+  --ploy-neutral-primary-800: oklch(0.263 0 358.4);
+  --ploy-neutral-primary-900: oklch(0.134 0 359.2);
+  --ploy-neutral-primary-950: oklch(0 0 0);
+  --ploy-neutral-inverse-50: oklch(0.98 0.005 249.7);
+  --ploy-neutral-inverse-100: oklch(0.956 0.011 249.5);
+  --ploy-neutral-inverse-200: oklch(0.916 0.021 249.3);
+  --ploy-neutral-inverse-300: oklch(0.867 0.034 249.1);
+  --ploy-neutral-inverse-400: oklch(0.812 0.049 248.9);
+  --ploy-neutral-inverse-500: oklch(0.75 0.065 248.7);
+  --ploy-neutral-inverse-600: oklch(0.692 0.074 248.7);
+  --ploy-neutral-inverse-700: oklch(0.607 0.072 248.7);
+  --ploy-neutral-inverse-800: oklch(0.508 0.062 248.7);
+  --ploy-neutral-inverse-900: oklch(0.398 0.045 248.7);
+  --ploy-neutral-inverse-950: oklch(0.28 0.03 248.7);
+  --ploy-accent-primary-50: oklch(0.98 0.009 271.46);
+  --ploy-accent-primary-100: oklch(0.931 0.03 269.66);
+  --ploy-accent-primary-200: oklch(0.851 0.068 267.86);
+  --ploy-accent-primary-300: oklch(0.753 0.118 266.06);
+  --ploy-accent-primary-400: oklch(0.641 0.176 264.26);
+  --ploy-accent-primary-500: oklch(0.516 0.223 262.46);
+  --ploy-accent-primary-600: oklch(0.487 0.185 261.46);
+  --ploy-accent-primary-700: oklch(0.445 0.16 260.46);
+  --ploy-accent-primary-800: oklch(0.395 0.129 259.46);
+  --ploy-accent-primary-900: oklch(0.34 0.099 258.46);
+  --ploy-accent-primary-950: oklch(0.28 0.074 257.46);
+  --ploy-accent-secondary-50: oklch(0.98 0.009 271.46);
+  --ploy-accent-secondary-100: oklch(0.931 0.03 269.66);
+  --ploy-accent-secondary-200: oklch(0.851 0.068 267.86);
+  --ploy-accent-secondary-300: oklch(0.753 0.118 266.06);
+  --ploy-accent-secondary-400: oklch(0.641 0.176 264.26);
+  --ploy-accent-secondary-500: oklch(0.516 0.223 262.46);
+  --ploy-accent-secondary-600: oklch(0.487 0.185 261.46);
+  --ploy-accent-secondary-700: oklch(0.445 0.16 260.46);
+  --ploy-accent-secondary-800: oklch(0.395 0.129 259.46);
+  --ploy-accent-secondary-900: oklch(0.34 0.099 258.46);
+  --ploy-accent-secondary-950: oklch(0.28 0.074 257.46);
+  --ploy-choice-checked-background: oklch(0.517 0.223 262.38);
+  --ploy-choice-checked-border: oklch(0.517 0.223 262.38);
+  --ploy-choice-checked-mark: oklch(0 0 0);
+  --ploy-accent-tertiary-50: oklch(0.98 0.009 271.46);
+  --ploy-accent-tertiary-100: oklch(0.931 0.03 269.66);
+  --ploy-accent-tertiary-200: oklch(0.851 0.068 267.86);
+  --ploy-accent-tertiary-300: oklch(0.753 0.118 266.06);
+  --ploy-accent-tertiary-400: oklch(0.641 0.176 264.26);
+  --ploy-accent-tertiary-500: oklch(0.516 0.223 262.46);
+  --ploy-accent-tertiary-600: oklch(0.487 0.185 261.46);
+  --ploy-accent-tertiary-700: oklch(0.445 0.16 260.46);
+  --ploy-accent-tertiary-800: oklch(0.395 0.129 259.46);
+  --ploy-accent-tertiary-900: oklch(0.34 0.099 258.46);
+  --ploy-accent-tertiary-950: oklch(0.28 0.074 257.46);
+  --radius-image: 20px;
+  --font-display: "Muoto", sans-serif;
+  --ploy-font-display: "Muoto", sans-serif;
+  --ploy-font-heading: "Muoto", sans-serif;
+  --ploy-font-body: "Open Sans", sans-serif;
+  --ploy-font-mono: "Open Sans", sans-serif;
+  color-scheme: dark;
+}
+/* ploy-theme-end */
+
+@font-face {
+  font-family: "Material Icons";
+  src: url("/fonts/8a243991-material-icons-400-normal.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Material Icons Outlined";
+  src: url("/fonts/b485b348-material-icons-outlined-400-normal.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/a19c7e35-muoto-300-italic.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/436f249c-muoto-300-normal.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/fdbd4f84-muoto-400-italic.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/55d1abde-muoto-400-normal-2.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/55d1abde-muoto-400-normal-2.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/528623ff-muoto-500-italic.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/f25dcfc3-muoto-500-normal.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/207658ea-muoto-700-italic.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/3fa19599-muoto-700-normal-2.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/3fa19599-muoto-700-normal-2.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muoto";
+  src: url("/fonts/eeea42a4-muoto-900-normal.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/84629fbb-open-sans-300-normal.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/d88625cd-open-sans-300-normal.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/265d4d0f-open-sans-300-normal.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/c13bbdda-open-sans-400-italic.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/0b97e3ae-open-sans-400-normal.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/0a827646-open-sans-600-normal.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans Semi Bold";
+  src: url("/fonts/0a827646-open-sans-600-normal.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/bdbf19ba-open-sans-700-normal.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

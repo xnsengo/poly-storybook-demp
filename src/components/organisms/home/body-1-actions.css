@@ -1,0 +1,21 @@
+[data-ploy-component="body-1-actions"] .body-1-actions-row {
+  display: flex;
+  gap: 16px;
+  padding: 48px 0;
+}
+[data-ploy-component="body-1-actions"] .body-1-actions-row > a {
+  flex: 1 1 0;
+}
+@media (max-width: 767px) {
+  [data-ploy-component="body-1-actions"] .body-1-actions-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  [data-ploy-component="body-1-actions"] .body-1-actions-row {
+    flex-direction: column;
+  }
+  [data-ploy-component="body-1-actions"] .body-1-actions-row > a {
+    flex: none;
+    min-height: 50px;
+  }
+}
