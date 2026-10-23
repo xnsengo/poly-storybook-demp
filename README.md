@@ -12,8 +12,34 @@ Investia 站点（`ploy-web`，Astro 6 + React 19 + Tailwind v4）组件库的 S
 npm install
 npm run storybook        # http://localhost:6006
 npm run build-storybook  # 输出到 storybook-static/
-npm run verify           # lint + typecheck + 构建
+npm run build            # 构建组件包：dist/ + COMPONENTS.md
+npm run verify           # lint + typecheck + 组件包构建 + Storybook 构建
 ```
+
+在线 Storybook：https://xnsengo.github.io/poly-storybook-demp/ （push 到 `main` 后由 GitHub Actions 自动部署）
+
+## 作为组件包使用
+
+这个仓库同时是 npm 包 `@xnsengo/investia-ui`：
+
+```bash
+npm i "@xnsengo/investia-ui@github:xnsengo/poly-storybook-demp#v0.1.0"
+```
+
+```tsx
+import { Button, SiteShell, Body2Products, homeContent } from "@xnsengo/investia-ui";
+```
+
+| 产物 | 内容 |
+| --- | --- |
+| `dist/index.js` + `*.d.ts` | 全部组件、页面、EN/FR 文案字典和 `cn` 等工具函数（ESM，含类型） |
+| `dist/components.css` | 组件自带的 CSS（section 样式、Swiper、Marquee） |
+| `dist/styles.css` | 独立使用时的完整 Tailwind 主题 + utility |
+| `COMPONENTS.md` | 自动生成的组件目录（用途说明 + Storybook 链接），给 AI 和开发者查阅 |
+
+`dist/` 和 `COMPONENTS.md` 会提交进仓库，这样从 GitHub 安装时不需要构建。改了组件后记得运行 `npm run build` 再提交。
+
+在 Ploy 项目中接入的步骤（含可直接贴进 `AGENTS.md` 的说明）见 [docs/ploy-integration.md](docs/ploy-integration.md)。
 
 ## 目录结构（Atomic Design）
 

@@ -1,0 +1,7 @@
+/* Standalone stylesheet for @xnsengo/investia-ui (dist/styles.css): the
+   Investia Tailwind theme plus every utility the components use. Projects that
+   already compile the same theme only need dist/components.css. */
+@import "./globals.css";
+
+@source "../components";
+@source not "../**/*.stories.tsx";

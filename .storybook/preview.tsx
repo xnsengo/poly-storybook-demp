@@ -2,6 +2,10 @@ import type { Preview } from "@storybook/react-vite";
 
 import "../src/styles/globals.css";
 
+import { installSubpathAssets } from "./subpath-assets";
+
+installSubpathAssets();
+
 // Breakpoints the site is measured against (Tailwind md = 768px, desktop 1140px+).
 const viewports = {
   phone: { name: "Phone 375", styles: { width: "375px", height: "812px" } },

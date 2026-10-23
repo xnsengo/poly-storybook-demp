@@ -13,6 +13,9 @@ if (!existsSync(join(site, "src", "components"))) {
 const here = resolve(import.meta.dirname, "..");
 
 const isStory = (path) => /\.stories\.tsx$/.test(path);
+// Files this project owns inside the copied folders.
+const OWNED = [join(here, "src", "styles", "package.css")];
+const isOwned = (path) => isStory(path) || OWNED.includes(path);
 
 // Remove copied source files (not stories) so deletions upstream carry over.
 function clean(dir) {
@@ -20,7 +23,7 @@ function clean(dir) {
   for (const name of readdirSync(dir)) {
     const path = join(dir, name);
     if (statSync(path).isDirectory()) clean(path);
-    else if (!isStory(path)) rmSync(path);
+    else if (!isOwned(path)) rmSync(path);
   }
 }
 
