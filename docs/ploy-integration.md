@@ -1,48 +1,54 @@
-# 在 Ploy 项目中使用 @xnsengo/investia-ui（POC）
+# Using @xnsengo/investia-ui in a Ploy project (POC)
 
-## 1. 安装
+## 1. Install
 
-在 Ploy 项目的 `package.json` 的 `dependencies` 里加：
+Add this to `dependencies` in the Ploy project's `package.json`:
 
 ```json
 "@xnsengo/investia-ui": "github:xnsengo/poly-storybook-demp#v0.1.0"
 ```
 
-然后用 bun 重新安装，更新 `bun.lock`（Ploy 项目用 bun 锁定依赖版本；如果项目里也有
-`package-lock.json`，按 Ploy 的 AGENTS.md 要求再运行一次 `npm install` 同步它）：
+Then reinstall with bun to update `bun.lock` (the Ploy project locks its dependencies with bun; if it
+also has a `package-lock.json`, run `npm install` as well to keep it in sync, as Ploy's AGENTS.md
+requires):
 
 ```bash
 bun install
 ```
 
-> 不要只用 `npm install`：没有 npm lockfile 时它会装到比 `bun.lock` 更新的 Astro / Cloudflare 版本，
-> 实测原站点会在 SSR 构建阶段报 `rollupOptions.input should not be an html file`，这和组件包无关。
+> Do not rely on `npm install` alone: without an npm lockfile it resolves newer Astro / Cloudflare
+> versions than `bun.lock`, and in testing the unmodified site then fails its SSR build with
+> `rollupOptions.input should not be an html file`. This is unrelated to the package.
 
-> 包的 `dist/` 已经提交在仓库里，安装时不需要构建。`react` / `react-dom` 是 peer 依赖，Ploy 项目已有；
-> 其余运行时依赖（Radix、swiper、motion、lucide-react 等）和 Ploy 项目里的版本一致。
+> The package's `dist/` is committed to the repository, so installing needs no build step.
+> `react` / `react-dom` are peer dependencies the Ploy project already has; the other runtime
+> dependencies (Radix, swiper, motion, lucide-react, …) match the Ploy project's versions.
 
-## 2. 样式
+## 2. Styles
 
-Ploy 项目已经用同一套 Investia Tailwind 主题编译 `src/styles/globals.css`，所以只需要：
+The Ploy project already compiles `src/styles/globals.css` with the same Investia Tailwind theme,
+so it only needs:
 
 ```css
-/* src/styles/globals.css，放在 @import "./theme.css"; 之后 */
+/* src/styles/globals.css, after @import "./theme.css"; */
 @import "@xnsengo/investia-ui/components.css";
 @source "../../node_modules/@xnsengo/investia-ui/dist";
 ```
 
-- `components.css`：组件自带的 CSS（各 section 样式、Swiper、Marquee）。
-- `@source`：Tailwind v4 默认不扫描 `node_modules`，这一行让它生成包内组件用到的 utility class。
+- `components.css`: the components' own CSS (section styles, Swiper, Marquee).
+- `@source`: Tailwind v4 does not scan `node_modules` by default; this line makes it generate the
+  utility classes the package's components use.
 
-不使用 Tailwind 的项目则引入 `@xnsengo/investia-ui/styles.css` + `components.css`。
+A project without Tailwind imports `@xnsengo/investia-ui/styles.css` plus `components.css` instead.
 
-## 3. 静态资源
+## 3. Static assets
 
-组件按根路径引用 `/fonts/*`、`/images/*`。Ploy 项目的 `public/` 里已经有同一批文件，不用额外处理。
+The components reference `/fonts/*` and `/images/*` by root path. The Ploy project's `public/`
+already contains the same files, so nothing else is needed.
 
-## 4. 贴进 Ploy `AGENTS.md` 的说明
+## 4. Snippet for the Ploy `AGENTS.md`
 
-把下面整段加到 Ploy 项目 `AGENTS.md` 的末尾：
+Append this block to the end of the Ploy project's `AGENTS.md`:
 
 ```markdown
 ## Shared component library (@xnsengo/investia-ui)
@@ -66,34 +72,34 @@ a component:
 - Do not edit files under `node_modules/@xnsengo/investia-ui`.
 ```
 
-## 5. 验证 POC
+## 5. Validating the POC
 
-1. 在 Ploy 里新建一个测试页，比如让它"用现有组件做一个关于我们页面"。
-2. 检查生成的代码是不是从 `@xnsengo/investia-ui` import，而不是在 `src/components/` 里新建文件。
-3. 构建并预览，确认样式、字体和图片正常。
+1. Create a test page in Ploy, for example by asking it to "build an About us page with the existing components".
+2. Check that the generated code imports from `@xnsengo/investia-ui` rather than adding files under `src/components/`.
+3. Build and preview, and confirm that styles, fonts and images render correctly.
 
-## 6. 升级版本
+## 6. Releasing a new version
 
-本仓库改完组件后：
+After changing components in this repository:
 
 ```bash
-npm run verify                         # 重新生成 dist/、COMPONENTS.md 并检查
-git add -A && git commit -m "..."      # 提交改动和新的 dist/
-npm version patch                      # 0.1.0 -> 0.1.1，生成版本提交和 git tag v0.1.1
+npm run verify                         # regenerate dist/ and COMPONENTS.md, and check everything
+git add -A && git commit -m "..."      # commit the changes together with the new dist/
+npm version patch                      # 0.1.0 -> 0.1.1: version commit plus git tag v0.1.1
 git push --follow-tags
 ```
 
-Ploy 项目把依赖里的 `#v0.1.0` 改成新的 tag，然后重新 install。
+In the Ploy project, change `#v0.1.0` in the dependency to the new tag and reinstall.
 
-## 7. 以后转私有包
+## 7. Moving to a private package later
 
-包名已经是带作用域的 `@xnsengo/investia-ui`，`publishConfig` 也指向 GitHub Packages。
-转私有时：把仓库设为私有，运行 `npm publish`（需要有 `write:packages` 权限的 token），
-然后 Ploy 项目里把依赖改成 `"^0.1.0"`，并加一个 `.npmrc`：
+The package name is already scoped (`@xnsengo/investia-ui`) and `publishConfig` points at GitHub
+Packages. To go private: make the repository private, run `npm publish` (with a token that has
+`write:packages`), then in the Ploy project change the dependency to `"^0.1.0"` and add an `.npmrc`:
 
 ```
 @xnsengo:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
 ```
 
-所有 `import` 语句都不用改。
+No `import` statement needs to change.
